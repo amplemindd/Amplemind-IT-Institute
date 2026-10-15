@@ -1,0 +1,99 @@
+.terms-container {
+  width: 72%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.terms-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.terms-header h1 {
+  font-size: 42px;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.terms-header p {
+  color: #64748b;
+  font-size: 16px;
+}
+
+.terms-content section {
+  margin-bottom: 30px;
+}
+
+.terms-content h2 {
+  color: #4caf50;
+  margin-bottom: 12px;
+  font-size: 24px;
+}
+
+.terms-content p,
+.terms-content li {
+  color: #555;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.terms-content p {
+  font-size: 1.2rem;
+}
+
+.terms-content ul {
+  padding-left: 20px;
+}
+
+.terms-content li {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .terms-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .terms-header h1 {
+    font-size: 32px;
+  }
+
+  .terms-content h2 {
+    font-size: 20px;
+  }
+
+  .terms-content p,
+  .terms-content li {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .terms-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .terms-header h1 {
+    font-size: 26px;
+  }
+
+  .terms-content h2 {
+    font-size: 18px;
+  }
+
+  .terms-content p,
+  .terms-content li {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}

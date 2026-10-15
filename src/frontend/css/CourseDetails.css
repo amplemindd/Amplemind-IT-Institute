@@ -1,0 +1,50 @@
+.course-details {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.course-image {
+  width: 62%;
+  height: 400px;
+  margin-left: 18%;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.accordion-item {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 1rem;
+  background: #f7f7f7;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion-content {
+  padding: 1rem;
+  background: white;
+}
+
+.accordion-content ul {
+  padding-left: 20px;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .course-image {
+    height: 220px;
+    border-radius: 8px;
+  }
+}

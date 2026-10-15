@@ -1,0 +1,32 @@
+.course-m{
+    width: 96.5%;
+    height: 400px;
+    /* background-color: aqua; */
+    display: flex;
+    padding: 20px 20px;
+}
+
+.pic{
+    width: 50%;
+    height: 400px;
+    /* background-color: beige; */
+}
+
+.overview{
+    width: 50%;
+    height: 400px;
+    /* background-color: brown; */
+}
+
+.pic img{
+    width: 80%;
+    padding: 20px 20px;
+    margin-left: 5%;
+}
+
+.overview p{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.6rem;
+    padding: 2%;
+}

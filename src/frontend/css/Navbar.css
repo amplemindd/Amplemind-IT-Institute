@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+#n-main {
+  width: 100%;
+  min-height: 70px;
+  height: auto;
+  align-items: center;
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff; /* White background */
+  color: #111111;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+  font-family: 'Poppins', sans-serif;
+}
+
+#n-sub1 {
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+
+#logo1 {
+  width: 180px; /* Default desktop size */
+  height: auto;
+  margin-left: 10%;
+  transition: transform 0.3s ease;
+}
+
+#logo1:hover {
+  transform: scale(1.02);
+}
+
+#n-sub2 {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5%;
+} 
+
+nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #111111;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+  color: #00b85c; /* Premium Green */
+}
+
+/* Green Underline Hover Effect */
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #00b85c;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after, nav a.active::after {
+  width: 100%;
+}
+
+#menu-btn {
+  display: none;
+  user-select: none;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 992px) {
+  nav {
+    gap: 15px;
+  }
+  nav a {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  #n-main {
+    padding: 10px 5%;
+    flex-wrap: wrap; /* Allows menu to drop below logo/btn */
+  }
+
+  #n-sub1 {
+    width: auto; /* Take necessary width */
+    margin-left: 0;
+  }
+
+  /* Fixed Logo Size for Mobile */
+  #logo1 {
+    width: 180px !important; /* Forces logo to be bigger on mobile */
+    margin-left: 0;
+  }
+
+  #menu-btn {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    color: #111111;
+  }
+
+  #n-sub2 {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    padding-right: 0;
+    margin-top: 15px;
+    background-color: #ffffff;
+    border-top: 1px solid #f0f0f0; /* Separator for mobile menu */
+  }
+
+  #n-sub2.show {
+    display: flex;
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center; /* Center links on mobile */
+    gap: 0;
+    width: 100%;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+    border-bottom: 1px solid #f7f9f8;
+  }
+
+  nav a::after {
+    display: none; /* Remove underline on mobile */
+  }
+
+  nav a:hover, nav a.active {
+    background-color: #f7f9f8; /* Soft background on active/hover */
+    color: #00b85c;
+  }
+}

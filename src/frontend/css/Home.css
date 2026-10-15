@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+/* --- Background: Black & Green Mixer --- */
+#hero-section {
+    width: 100%;
+    min-height: 80vh;
+    background: linear-gradient(135deg, #000000, #0a2612, #000000); 
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Taaki content aur image wrapper dono end tak stretch ho */
+    padding: 0 8%;
+    overflow: hidden; /* Yeh image ko box ke baahar nahi jaane dega */
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+/* --- Content Styling --- */
+.hero-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: center; /* Text center me rahega */
+    z-index: 2;
+}
+
+.hero-badge {
+    font-size: 16px;
+    font-weight: 600;
+    color: #00ff88;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.hero-title {
+    font-size: 64px;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.1;
+    background: -webkit-linear-gradient(#ffffff, #b3d1c0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    font-weight: 300;
+    margin: 20px 0 40px 0;
+    color: #cccccc;
+}
+
+/* --- Buttons --- */
+.hero-btn-group {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-btn-group button {
+    padding: 15px 35px;
+    font-size: 18px;
+    font-family: inherit;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #00ff88;
+    color: #000000;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #00cc6a;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 255, 136, 0.5);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #00ff88;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(0, 255, 136, 0.1);
+    transform: translateY(-3px);
+}
+
+/* --- Image & Up-Down Animation --- */
+.hero-image-wrapper {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Image ko bottom line se touch karne ke liye */
+}
+
+.hero-image {
+    width: 90%;
+    max-width: 550px;
+    height: auto;
+    object-fit: contain;
+    /* Image bottom se up-down move karegi */
+    animation: upDownMove 4s ease-in-out infinite; 
+    transform-origin: bottom;
+}
+
+/* Up-Down Slide Animation */
+@keyframes upDownMove {
+    0% { transform: translateY(30px); }  /* Box ke thoda andar chhupegi */
+    50% { transform: translateY(-10px); } /* Box ke upar aayegi */
+    100% { transform: translateY(30px); } /* Wapas andar jayegi */
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 992px) {
+    #hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 5% 0 5%; /* Neeche padding 0 taaki image bottom me hi rahe */
+    }
+
+    .hero-content {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .hero-image-wrapper {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-title {
+        font-size: 48px;
+    }
+
+    .hero-subtitle {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 38px;
+    }
+
+    .hero-btn-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-btn-group button {
+        width: 100%;
+    }
+    
+    .hero-image {
+        max-width: 300px;
+    }
+}

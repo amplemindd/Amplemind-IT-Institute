@@ -1,0 +1,64 @@
+.stats-section {
+  margin-top: 5%;
+  background: linear-gradient(135deg, #46484e);
+  padding: 80px 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  transition: 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.counter-number {
+  font-size: 48px;
+  font-weight: bold;
+  color: #bcc7cb;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  color: #ffffff;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 576px) {
+  .stats-section {
+    padding: 60px 15px;
+  }
+
+  .stats-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .stat-card {
+    padding: 30px 15px;
+  }
+
+  .counter-number {
+    font-size: 36px;
+  }
+
+  .stat-card p {
+    font-size: 15px;
+  }
+}

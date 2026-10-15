@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* --- Main Section Setup --- */
+.contact-section {
+  padding: 100px 5%;
+  background-color: #f7f9f8;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.contact-container {
+  max-width: 1350px;
+  margin: auto;
+}
+
+/* --- Section Title --- */
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  font-size: 46px;
+  font-weight: 800;
+  color: #111111;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+}
+
+.section-title h2 span {
+  color: #00b85c;
+}
+
+.section-title p {
+  font-size: 17px;
+  color: #666666;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+/* --- Info Cards (Grid) --- */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.c-card {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid rgba(0, 184, 92, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  transition: all 0.4s ease;
+}
+
+.c-card:hover {
+  transform: translateY(-10px);
+  border-color: #00b85c;
+  box-shadow: 0 15px 40px rgba(0, 184, 92, 0.15);
+}
+
+.c-icon {
+  width: 75px;
+  height: 75px;
+  background: #111111;
+  border-radius: 50%;
+  margin: 0 auto 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.c-icon img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.c-card:hover .c-icon {
+  background: #00b85c;
+  transform: scale(1.1);
+}
+
+.c-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 10px;
+}
+
+.c-card p {
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.6;
+}
+
+/* --- Map and Form Layout --- */
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+/* Map Style */
+.map-container {
+  width: 100%;
+  min-height: 550px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eaeaea;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* --- EXACT MATCH FORM UI --- */
+.form-container {
+  background: #ffffff;
+  padding: 50px 45px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.form-header {
+  margin-bottom: 35px;
+  text-align: left;
+}
+
+.form-header h3 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #111111;
+  margin-bottom: 10px;
+}
+
+.form-header p {
+  font-size: 16px;
+  color: #777777;
+}
+
+/* Connected Input Row */
+.input-group-row {
+  display: flex;
+  width: 100%;
+  border: 1px solid #e4e4e4;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  overflow: hidden; /* Keeps inputs inside the rounded corners */
+}
+
+.input-group-row:focus-within {
+  border-color: #00b85c;
+  box-shadow: 0 0 0 3px rgba(0, 184, 92, 0.1);
+}
+
+.input-group-row input {
+  flex: 1;
+  width: 50%;
+  padding: 18px 20px;
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  color: #111111;
+  outline: none;
+}
+
+.input-group-row input::placeholder {
+  color: #999999;
+}
+
+/* Divider line between two inputs */
+.left-input {
+  border-right: 1px solid #e4e4e4 !important;
+}
+
+/* Textarea */
+form textarea {
+  width: 100%;
+  padding: 18px 20px;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  color: #111111;
+  background: #ffffff;
+  border: 1px solid #e4e4e4;
+  border-radius: 12px;
+  outline: none;
+  resize: vertical;
+  margin-bottom: 25px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+form textarea::placeholder {
+  color: #999999;
+}
+
+form textarea:focus {
+  border-color: #00b85c;
+  box-shadow: 0 0 0 3px rgba(0, 184, 92, 0.1);
+}
+
+/* Submit Button */
+.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  background: #111111; /* Pure Black from Image */
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 18px 0;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn .arrow {
+  transition: transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #00b85c; /* Turns Green on Hover */
+}
+
+.submit-btn:hover .arrow {
+  transform: translateX(6px);
+}
+
+/* --- Animations --- */
+.slide-up { animation: slideUp 0.8s ease forwards; opacity: 0; }
+.slide-left { animation: slideLeft 0.8s ease forwards; opacity: 0; }
+.slide-right { animation: slideRight 0.8s ease forwards; opacity: 0; }
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes slideLeft {
+  from { transform: translateX(40px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideRight {
+  from { transform: translateX(-40px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 992px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+  
+  .map-container {
+    height: 400px;
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 70px 5%;
+  }
+
+  .section-title h2 {
+    font-size: 36px;
+  }
+
+  .form-container {
+    padding: 35px 25px;
+  }
+
+  /* Break the connected inputs into stacked inputs for mobile */
+  .input-group-row {
+    flex-direction: column;
+    border: none;
+    background: transparent;
+  }
+  
+  .input-group-row input {
+    width: 100%;
+    border: 1px solid #e4e4e4;
+    border-radius: 12px;
+    margin-bottom: 15px;
+  }
+  
+  .left-input {
+    border-right: 1px solid #e4e4e4 !important;
+  }
+
+  .map-container {
+    height: 300px;
+    min-height: 300px;
+  }
+}
